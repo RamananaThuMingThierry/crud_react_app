@@ -1,0 +1,31 @@
+import React, {Component} from "react";
+
+class Customer extends Component{
+    
+    onDelete = () =>{
+       this.props.onDelete(this.props.customer.id);
+    }
+    
+    onEdit = () =>{
+       this.props.onEdit(this.props.customer);
+    }
+    
+    render(){
+        
+        const {id, nom, prenom, email} = this.props.customer;
+
+        return(
+            <tr>
+                <td style={{ textAlign: "center"}}>{id}</td>
+                <td>{ `${nom} ${prenom}`}</td>
+                <td>{email}</td>
+                <td className="d-inline">
+                    <button className="mini ui blue button" onClick={this.onEdit}>Edit</button>
+                    <button className="mini ui red button" onClick={this.onDelete}>Delete</button>
+                </td>
+            </tr>
+        );
+    }
+}
+
+export default Customer;

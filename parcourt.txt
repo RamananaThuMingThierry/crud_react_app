@@ -1,0 +1,8 @@
+. Démarrer le server
+    -> npm start
+
+. Mettre ce cdn au header
+    -> https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css
+
+. Installer axiofa-spin
+    -> npm install axios --save
